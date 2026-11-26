@@ -23,7 +23,7 @@ MongoDB, Express, Node.js, Vue 3, Vue Router, Vuex, Tailwind CSS, and JWT-based 
 
 ## Run locally
 
-Copy `.env.example` to an untracked `.env` file and set a local MongoDB connection, fresh `JWT_SECRET`, and an encryption key. Then:
+Copy `.env.example` to an untracked `.env` file and set a local MongoDB connection, fresh `JWT_SECRET`, and a 32-byte encryption key for `ENCRYPTION_KEY`. Then:
 
 ```bash
 npm install

@@ -17,8 +17,12 @@ const { requireLogin } = require("../middleware/authentication");
 const { Client, NoAuth } = require("whatsapp-web.js");
 const multer = require("multer");
 const crypto = require("crypto");
+const fs = require("fs");
+const path = require("path");
 
 const router = Router();
+const uploadsDir = path.join(__dirname, "..", "uploads");
+fs.mkdirSync(uploadsDir, { recursive: true });
 
 const createJwt = (payload) => {
   return jwt.sign({ payload }, SECRET, { expiresIn: MAX_AGE });
@@ -26,7 +30,7 @@ const createJwt = (payload) => {
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/");
+    cb(null, uploadsDir);
   },
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
