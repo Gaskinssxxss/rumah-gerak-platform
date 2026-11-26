@@ -1,6 +1,6 @@
-# Rumah Gerak Platform
+# Rumah Gerak — Bima City 2024 Election Volunteer Platform
 
-A MEVN application for coordinating a volunteer network. The project combines registration, activity reporting, field locations, issue reports, content publishing, and administrative views.
+Built to coordinate volunteers for the 2024 election in Bima City, Indonesia. This MEVN application combines registration, activity reporting, field locations, issue reports, content publishing, and administrative views.
 
 ## What it does
 
